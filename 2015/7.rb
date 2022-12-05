@@ -46,23 +46,25 @@ p ns
         b = comb.split(' ')[2].to_i
         # p a if (a == 'b' && b == 2)
         if h[a]
-          s = h[a].to_s(2)
-          (16 - s.length).times { s = '0' + s}
-          b.times do
-            s = '0' + s[0..-2]
-          end
-          h[name] = s.to_i(2)
+          # s = h[a].to_s(2)
+          # (16 - s.length).times { s = '0' + s}
+          # b.times do
+          #   s = '0' + s[0..-2]
+          # end
+          # h[name] = s.to_i(2)
+          h[name] = h[a] >> b
         end
       elsif comb.split(' ')[1] == 'LSHIFT'
         a = comb.split(' ')[0]
         b = comb.split(' ')[2].to_i
         if h[a]
-          s = h[a].to_s(2)
-          (16 - s.length).times { s = '0' + s}
-          b.times do
-            s = s[1..-1] + '0'
-          end
-          h[name] = s.to_i(2)
+          # s = h[a].to_s(2)
+          # (16 - s.length).times { s = '0' + s}
+          # b.times do
+          #   s = s[1..-1] + '0'
+          # end
+          # h[name] = s.to_i(2)
+          h[name] = h[a] << b
         end
       elsif comb.split(' ')[1] == 'AND'
         a = comb.split(' ')[0]
@@ -92,5 +94,5 @@ p ns
     end
   end
 end
-p h
+# p h
 p h['a']

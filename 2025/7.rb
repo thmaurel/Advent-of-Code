@@ -14,7 +14,6 @@ cur = [{n: s, par: -1}]
 finals = []
 
 until cur.empty?
-  cur.sort_by! {|x| x[:n].last}
   f = cur.shift
   i = f[:n].first
   j = f[:n].last

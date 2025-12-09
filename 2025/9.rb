@@ -1,4 +1,4 @@
-# takes a very long time
+# takes a very long time (~20mn)
 
 d = open('9.txt').read.split("\n")
 

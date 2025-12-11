@@ -26,6 +26,7 @@ end
 p "Part1: #{res}"
 
 # Part 2
+# I previously ran a BFS to know in which order you would visit dac and fft
 # Storing in the hash val the number of way from every visited place to the out variable
 def dfs(n, nbs, v, val, out)
   v[n] = true
